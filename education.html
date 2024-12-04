@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" type="image/png" href="assets/icon-rizal.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="desktop-nav" class="left-side">
+        <div class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html#">José Rizal</a></li>
+            </ul>
+        </div>
+     
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">Introduction</a></li>
+                <li><a href="index.html#early-life">Early Life</a></li>
+                <li class="dropdown"><a>Biography</a>
+                    <div class="content">
+                        <a href="education.html">Education</a>
+                        <a href="paintings.html#painting-item1"> Works</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Education Section -->
+    <div class="education__pic-container">
+        <img src="./assets/book.png" alt="Jose Rizal Profile Picture" class="education-img">
+        <h1 class="education-font">Education</h1>
+    </div>
+    <div>
+        <img src="./assets/diploma.png" alt="Jose Rizal Diploma" class="diploma">
+    </div>
+
+    <!-- Education Content -->
+    <section class="education-content">
+        <div class="intro">
+            <p>Jose Rizal’s first teacher was his mother, who had taught him how to read and pray and who had encouraged him to write poetry. Later, private tutors taught the young Rizal Spanish and Latin, before he was sent to a private school in Biñan.</p>
+            <p>When he was 11 years old, Rizal entered the Ateneo Municipal de Manila. He earned excellent marks in subjects like philosophy, physics, chemistry, and natural history. At this school, he read novels; wrote prize-winning poetry (and even a melodrama—“Junto al Pasig”); and practiced drawing, painting, and clay modeling, all of which remained lifelong interests for him.</p>
+            <p>Rizal eventually earned a land surveyor’s and assessor’s degree from the Ateneo Municipal while taking up Philosophy and Letters at the University of Santo Tomas. Upon learning that his mother was going blind, Rizal opted to study ophthalmology at the UST Faculty of Medicine and Surgery. He, however, was not able to complete the course because “he became politically isolated by adversaries among the faculty and clergy who demanded that he assimilate to their system.”</p>
+            <p>Without the knowledge of his parents, Rizal traveled to Europe in May 1882. According to his biographer, Austin Craig, Rizal, “in order to obtain a better education, had had to leave his country stealthily like a fugitive from justice, and his family, to save themselves from persecution, were compelled to profess ignorance of his plans and movements. His name was entered in Santo Tomas at the opening of the new term, with the fees paid, and Paciano had gone to Manila pretending to be looking for this brother whom he had assisted out of the country.”</p>
+            <p>Rizal earned a Licentiate in Medicine at the Universidad Central de Madrid, where he also took courses in philosophy and literature. It was in Madrid that he conceived of writing Noli Me Tangere. He also attended the University of Paris and, in 1887, completed his eye specialization course at the University of Heidelberg. It was also in that year that Rizal’s first novel was published (in Berlin).</p>
+            <p>Rizal is said to have had the ability to master various skills, subjects, and languages. Our national hero was also a doctor, farmer, naturalist (he discovered the Draco rizali, a small lizard; Apogania rizali, a beetle; and the Rhacophorus rizali, a frog), writer, visual artist, athlete (martial arts, fencing, and pistol shooting), musician, and social scientist.</p>
+        </div>
+
+        <!-- Timeline or Major Achievements -->
+        <div class="timeline">
+            <h2>Key Milestones in Rizal's Education</h2>
+            <ul>
+                <li><strong>1877</strong> - Enrolled in Ateneo Municipal de Manila, where he completed his Bachelor's degree in Arts.</li>
+                <li><strong>1882</strong> - Studied medicine at the Universidad Central de Madrid in Spain.</li>
+                <li><strong>1885</strong> - Received his degree in medicine and pursued further studies in Paris and Germany.</li>
+                <li><strong>1887</strong> - Published his first novel, "Noli Me Tangere", during his studies in Europe.</li>
+            </ul>
+        
+        </div>
+        <hr class="straight-line">
+        <div class="article-font">
+            <h2>Read Articles about Rizal's Education</h2>
+        </div>
+        
+        <div class="article-buttons">
+            <a href="https://www.philstar.com/other-sections/education-and-home/2019/07/11/1933856/rediscovering-dr-jose-p-rizal-teacher" target="_blank"><button class="article-btn">Article 1</button></a>
+            <a href="https://school-principal.blogspot.com/2011/06/rizals-thoughts-on-education.html" target="_blank"><button class="article-btn">Article 2</button></a>
+        </div>
+        
+        
+            <div><div class="spacer"></div></div>
+        
+
+        </div>
+        
+    </section>
+
+
+</body>
+<script>
+    function toggleSubNav() {
+        var subNav = document.getElementById("sub-nav");
+
+        // Toggle the display property between 'none' (hidden) and 'block' (visible)
+        if (subNav.style.display === "none" || subNav.style.display === "") {
+            subNav.style.display = "block";
+        } else {
+            subNav.style.display = "none";
+        }
+    }
+</script>
+</html>

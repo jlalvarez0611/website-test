@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" type="image/png" href="assets/icon-rizal.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <!-- Main Navbar -->
+<!-- Main Navbar -->
+<nav id="desktop-nav" class="left-side">
+    <div class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html#">José Rizal</a></li>
+        </ul>
+    </div>
+    <div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">Introduction</a></li>
+            <li><a href="index.html#early-life">Early Life</a></li>
+            <li class="dropdown"><a>Biography</a>
+                <div class="content">
+                    <a href="education.html">Education</a>
+                    <a href="paintings.html#painting-item1">Works</a>
+                    <a href="literature.html">Literature</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Secondary Navbar -->
+<nav id="secondary-nav">
+    <ul class="nav-links">
+        <li><a href="paintings.html#paintings">Paintings</a></li>
+        <li><a href="#literature">Literature</a></li>
+        <li><a href="#sculptures">Sculptures</a></li>
+    </ul>
+</nav>
+
+
+
+
+
+</body>
+<script>
+    function toggleSubNav() {
+        var subNav = document.getElementById("sub-nav");
+
+        // Toggle the display property between 'none' (hidden) and 'block' (visible)
+        if (subNav.style.display === "none" || subNav.style.display === "") {
+            subNav.style.display = "block";
+        } else {
+            subNav.style.display = "none";
+        }
+    }
+</script>
+</html>

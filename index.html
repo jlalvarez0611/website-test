@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" type="image/png" href="assets/icon-rizal.png">
+
+</head>
+<body>
+
+    <nav id="desktop-nav" class="left-side">
+        <div class="logo">
+           <ul class="nav-links">
+            <li><a href=#>José Rizal</a></li>
+           </ul>
+        </div>
+ 
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">Introduction</a></li>
+                <li><a href="#early-life">Early Life</a></li>
+                <li class="dropdown"><a>Biography</a>
+                        <div class="content">
+                        <a href="education.html">Education</a>
+                        <a href="paintings.html#painting-item1">Works</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <img src="./assets/front-page.png">
+    </section>
+
+    <section id="about">
+        <h1 class="section-title encapsulated">Introduction to José Rizal</h1>  
+        <div class="section-container">
+            <div class="experience-image">
+                <img src="./assets/rizal-experience.png" alt="Profile Picture" class="about-pic"/>
+            </div> 
+            <div>
+                <h1 class="bio-title" data-text="José Protasio Rizal Mercado y Alonso Realonda">
+                    José Protasio Rizal Mercado y<br> Alonso Realonda                
+                </h1>
+                <p class="bio-subtitle">
+                    <strong>Born:</strong> June 19, 1861, Calamba, Philippines<br>
+                    <strong>Died:</strong> December 30, 1896, Manila (aged 35)<br>
+                </p>
+                <hr class="straight-line">
+                <p class="bio-description">
+                    José Protasio Rizal Mercado y Alonso Realonda was a Filipino nationalist, writer, and polymath active at the end of the Spanish colonial period of the Philippines. 
+                    He is considered a national hero (<em>pambansang bayani</em>) of the Philippines. 
+                    An ophthalmologist by profession, Rizal became a writer and a key member of the Filipino Propaganda Movement, which advocated political reforms for the colony under Spain.
+                </p>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow" class="icon arrow" onclick="location.href='./#early-life'"/>
+    </section>
+
+    <section id="early-life">
+        <h2 class="section-title">Rizal's Early Life</h2>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <!-- Swap the position of the image and description here -->
+            <div>
+                <h2 class="experience-sub-title">CHILDHOOD</h2>
+                <div class="article-container">
+                    <article>
+                        <div class="early-life-description">
+                            Rizal spent his early childhood in the town of Calamba. He had many 
+                            fond memories of exploring the forests and rivers near his home. Rizal 
+                            also had a strong religious upbringing, regularly attending church and prayers. 
+                            He began writing poetry at a young age and showed an early talent for art and drama.
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="childhood-image">
+                <img src="assets/rizal-kid.png" alt="Rizal Childhood Image">
+            </div>
+        </div>
+        </div>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="family-content-wrapper">
+                    <div class="family-image">
+                        <img src="assets/rizal-family.png" alt="Rizal Family">
+                    </div>
+                    <div>
+                        <h2 class="experience-sub-title">FAMILY BACKGROUND AND INFLUENCES</h2>
+                        <div class="article-container">
+                            <article>
+                                <div class="early-life-description">
+                                    Rizal’s family played a crucial role in shaping his values,
+                                     providing him with both the emotional and intellectual support
+                                      needed to pursue his goals. His family, especially his parents 
+                                      and siblings, fostered an environment of learning and critical
+                                       thinking that helped him become one of the most important figures
+                                        in Philippine history. Their influence, combined with his 
+                                        exposure to progressive European ideas, paved the way for his
+                                         vision of a free and just Philippines.
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><button class="button" onclick="window.open('//bayaningrizal.pairserver.com/jru/rizalfamily.html', '_blank')">CLICK HERE FOR MORE RIZAL'S FAMILY INFORMATION</button></div>
+</section>      
+<section>
+    <!-- Biography Modal -->
+<div id="biographyModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h1>Biography of José Rizal</h1>
+        <p>This is the biography content of José Rizal.</p>
+    </div>
+</div>
+
+</section>  
+
+    <script>
+        function toggleSubNav() {
+            var subNav = document.getElementById("sub-nav");
+
+            // Toggle the display property between 'none' (hidden) and 'block' (visible)
+            if (subNav.style.display === "none" || subNav.style.display === "") {
+                subNav.style.display = "block";
+            } else {
+                subNav.style.display = "none";
+            }
+        }
+
+        // Function to open the modal
+    function openBiography() {
+        document.getElementById('biographyModal').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('biographyModal').style.display = 'none';
+    }
+
+    // Close the modal if user clicks outside of it
+    window.onclick = function(event) {
+        const modal = document.getElementById('biographyModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+    </script>
+
+</body>
+</html>

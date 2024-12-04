@@ -1,0 +1,1492 @@
+/* GENERAL STYLING */
+
+/* GENERAL STYLING */
+
+/* Define the Caslon Antique font */
+@font-face {
+    font-family: 'Caslon Antique'; /* Define the font family */
+    src: url('assets/caslon-antique.regular.ttf') format('truetype'); /* Correct file path */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the Caslon Antique font to the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Caslon Antique', serif; /* Apply the Caslon Antique font */
+    background-image: url('assets/background.png'); /* Replace with your image */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center;
+    background-size: cover; /* Ensure the image covers the entire page */
+    height: 100%;
+    color: #fff; /* Default text color */
+}
+
+/* Other body-related styles will inherit the font-family */
+
+
+#rizal-title {
+    font-family: 'Dancing Script', cursive; /* Apply a different font */
+    font-size: 48px; /* Change the font size */
+    font-weight: bold; /* Make the font bold */
+    color: #333; /* Set the color */
+}
+
+.special-font {
+    font-family: 'Dancing Script', cursive; /* Apply a different font */
+    font-size: 36px; /* Change the font size */
+    font-weight: normal; /* Change font weight */
+    color: #000; /* Set text color */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+/* General Navbar Styles */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+
+    
+}
+nav {
+    position: sticky; /* Keeps the navbar fixed at the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Makes sure it's on top of other content */
+    background-color: rgba(139, 69, 19, 0.5); /* Transparent dark brown background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: adds shadow for effect */
+    padding: 3px 0;
+    display: flex;
+    justify-content: space-between; /* Centers the navbar items */
+    width: 100%; /* Full-width navbar */
+    top: 0; /* Ensure it's aligned at the top */
+    padding-bottom: -5rem;
+    height: 70px; /* Adjust as needed */
+    line-height: 50px; /* Vertically align text/icons if needed */
+
+}
+
+/* Navbar items */
+nav li {
+    margin: px; /* Space between the list items */
+}
+
+nav li a {
+    font-size: 30px; /* Increased font size for links */
+    font-weight: 550;
+    text-align: center;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px; /* Padding inside links */
+    border-radius: 5px; /* Rounded corners for the links */
+    transition: background-color 0.3s ease;
+    
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background color on hover */
+}
+
+/* Sticky navbar (optional enhancement) */
+nav.sticky {
+    background: linear-gradient(to bottom right, #e4d4b7, #fdf5e6); /* A different background when sticky */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow when sticky */
+}
+
+nav.sticky li a:hover {
+    background-color: #a48f66; /* Hover effect for sticky state */
+}
+
+nav .logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+nav .logo a{
+    font-size: 40px; /* Adjust this value as needed */
+    font-weight: bold; /* Optional: Makes the text bold */
+    color: white; /* Ensure the text is white */
+    text-decoration: none; /* Remov* Space between the logo and the items */
+    padding-bottom: 2px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: .5rem; /* Reduced gap between buttons */
+    list-style: none;
+    justify-content: flex-end; /* Links aligned to the right */
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+
+
+.logo {
+    font-size: 4rem;
+    justify-content: left;
+    margin-left: 20px;
+    
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+
+/* General style for section titles */
+
+.education__pic-container {
+    display: flex;
+    align-items: center; /* Vertically center the text and image */
+    justify-content: space-between; /* Space between the elements */
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for an engraved look */
+    border-radius: 0 0 10% 10%; /* Curved bottom border */
+    background: linear-gradient(45deg, rgb(172, 138, 106, 0.5), rgb(53, 38, 24, 0.5));
+    padding-top: -10rem;
+    padding-bottom: -10rem;
+}
+
+
+
+/* Image styling */
+.education__pic-container img {
+    width: 10%; /* Adjust the size of the image */
+    object-fit: contain; /* Ensure the image doesn't get stretched */
+    margin-top: -10px;
+    margin-left: 80px;
+    
+    
+}
+
+/* Position the text to the right of the image */
+.education-font {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+    color: #fff8e1 ; /* Adjust text color */
+    margin-right: 48rem;
+    margin-top: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 3);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+.section-title {
+    padding-top: 4vh;
+    font-size: 2.5rem; /* Larger font for emphasis */
+    text-align: center;
+    position: relative;
+    margin: 40px 0; /* Space around the title */
+    padding: 10px 0; /* Inner padding for spacing */
+    color: #4a2c2a; /* Dark brown to match old paper style */
+    font-family: 'Georgia', serif; /* Classic serif font */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+/* Decorative line above the title */
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px; /* Adjust to create space above title */
+    height: 1px;
+    background: #6b4226; /* Color of the curvy line */
+
+
+}
+
+/* Curvy line below the title */
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1px; /* Adjust to create space below title */
+    height: 1px;
+    background: #6b4226; /* Color of the curvy line */
+    border-radius: 0 0 50% 50%; /* Curved bottom border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for an engraved look */
+}
+
+
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    width: 100%; /* Full width of the section */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+#profile img {
+    width: 100%; /* Stretch the image to the full width of the section */
+    height: 100%; /* Stretch the image to the full height of the section */
+    object-fit: cover; /* Ensure the image covers the entire section without distortion */
+}
+
+.section__pic-container-profile {
+    display: flex;
+    height: 600px;
+    width: 600px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+
+
+}
+
+
+#socials-contaiiner {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-color-1 {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid #5C4033;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color1
+.btn-color2 {
+    border: rgb(53, 53, 53) .1rem solid;
+}
+
+.btn-color1:hover
+.btn-color2:hover {
+    cursor: pointer;
+}
+
+.btn-color2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background-color: #523b37;
+    color: white;
+    border-color: #533a35;
+}
+
+.btn-color-2 {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid #5C4033;
+}
+
+.btn-color-2:hover {
+    background-color: #523b37;
+    color: white;
+    border-color: #533a35;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 20px;
+}
+
+#about h1, #about p {
+    margin: 0;
+}
+
+#about h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.about-containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+    text-shadow: #333;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+
+.section-container {
+    
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container-about {
+    height: 600px;
+    width: 600px;
+    margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+.experience-image img {
+    width: 30vw; /* Use 50% of the viewport width */
+    height: auto; /* Keep aspect ratio intact */
+    max-width: none; /* Remove the max-width constraint */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-top: 50px;
+}
+
+.experience-image {
+    flex: 1; /* Take up half of the available space */
+    padding-right: 20px; /* Optional: space between image and content */
+}
+
+.experience-content-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+
+.childhood-image img {
+    width: 30vw; /* Use 50% of the viewport width */
+    height: auto; /* Keep aspect ratio intact */
+    max-width: none; /* Remove the max-width constraint */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); 
+    margin-top: 40px;
+}
+
+.childhood-image {
+    flex: 1; /* Take up half of the available space */
+    padding-right: 20px; /* Optional: space between image and content */
+}
+
+.childhood-content-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+.family-image img {
+    width: 30vw; /* Use 50% of the viewport width */
+    height: auto; /* Keep aspect ratio intact */
+    max-width: none; /* Remove the max-width constraint */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin-top: 40px;
+}
+
+.family-image {
+    flex: 1; /* Take up half of the available space */
+    padding-right: 20px; /* Optional: space between image and content */
+}
+
+.family-content-wrapper {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experience-details-container {
+    padding: 20px;
+}
+
+.article-container {
+    display: flex;               
+    width: 100%;                
+    height: 100%;               
+    box-sizing: border-box;  
+    font-size: 1.5rem; 
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+article {
+    width: 100%;             
+    height: 100%;                
+    display: flex;                 
+    justify-content: center;    
+}
+
+article div {
+    /* Optional styling for the div inside the article */
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+article .icon {
+    cursor: default;
+}
+
+/* PROJECTS SECTIOn */
+
+
+
+#project {
+    position: relative;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+.priect-title {
+    margin: 1rem;
+    color: black;
+}
+
+.prject-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+
+/* General Container Styling */
+.bio-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #fdf5e6, #e4d4b7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    border: 1px solid #c3b092;
+}
+
+/* Title Styling */
+.bio-title {
+    font-size: 2rem;
+    font-weight: 1000;
+    color: black;
+    text-align: center;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+    padding-bottom: 2rem;
+    padding-top: 3.5rem;
+    
+}
+
+/* Subtitle Styling */
+.bio-subtitle {
+    font-size: 1.2rem;
+    color: #666666;
+    padding: 1rem;
+    font-weight: 500;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+    margin-top: -10px;
+}
+
+/* Description Styling */
+.bio-description {
+    font-size: 1.5rem;
+    color: #333333;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+}
+
+.early-life-description {
+    font-size: 1.5rem;
+    color: #333333;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 400;
+    text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+    justify-content: center;
+    text-align: center;
+    
+}
+
+/* Hover Effects */
+.bio-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title-container {
+    max-width: 90%; /* Restrict the container width */
+    margin: 1rem auto; /* Center the container */
+    padding: 1rem; /* Add some padding */
+    background: linear-gradient(to right, #fdf5e6, #e4d4b7); /* Soft earthy gradient */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem; /* Increase the size of the title */
+    font-weight: 600; /* Slightly bold */
+    color: #5c4033; /* Warm earthy brown color */
+    text-transform: uppercase; /* Uppercase text for style */
+    letter-spacing: 1.5px; /* Add spacing between letters for effect */
+    margin: 0; /* Remove margin to ensure no extra space around the title */
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem; /* Increase the size of the title */
+    color: #4a2c2a;
+    margin: 0; /* Remove margin to ensure no extra space around the title */
+    text-align: center;
+    padding: 6rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.straight-line {
+    border: 0; /* Remove the default border */
+    height: 2px; /* Set the height of the line */
+    background-color: #5c4033; /* Color of the line */
+    width: 100%; /* Make the line stretch across the full width */
+    margin: 20px 0; /* Add space above and below the line */
+}
+
+
+.brush-stroke-container {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #ff6b6b 25%, transparent 25%) 0 0,
+                linear-gradient(225deg, #ff6b6b 25%, transparent 25%) 0 0;
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.center-button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    height: 100vh; /* Make the container fill the viewport */
+    margin-left: ;
+}
+
+.button {
+
+    background: linear-gradient(45deg, #4b2c2c, #4b2c2c);
+    border: 2px solid #4b2c2c;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    outline: none;
+    margin-left: 60px;
+    font-family: 'Caslon Antique', serif;
+}
+
+.button:hover {
+    background: linear-gradient(45deg, #4b2c2c, #4b2c2c);
+    border-color: #4b2c2c;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Modal Overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Make sure it sits above other content */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background: #fff;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.page-section {
+    display: none; /* Hide all sections initially */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f4f4f4; /* Background color for visibility */
+}
+
+/* Show active section */
+.page-section.active {
+    display: block;
+}
+
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown:hover {
+    background-color: rgba(139, 69, 19, 0.692); /* Transparent dark brown background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
+
+}
+
+.dropdown a { 
+    display: block;
+}
+
+.dropdown .content {
+    position: absolute;
+    display: none;
+    background-color: rgba(139, 69, 19, 0.692); /* Transparent dark brown background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87);
+    padding-top: 10PX;
+}
+
+.dropdown:hover .content{
+    display: block;
+
+}
+
+.diploma {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;  /* Set the desired width */
+    margin-top: 2rem;
+    
+}
+
+.intro {
+    font-family: 'Caslon Antique', serif; /* Apply the Caslon Antique font */
+    font-size: 1.5rem; /* Slightly larger text for readability */
+    color: rgb(85, 70, 56); /* Dark brown color to match the earthy tone */
+    line-height: 1.8; /* Increases line spacing for better readability */
+    letter-spacing: 0.5px; /* Adds slight spacing between letters for style */
+    text-align: left; /* Justifies text for a clean, professional look */
+    background-color: rgba(255, 239, 204, 0.4); /* Soft off-white background with slight opacity */
+    padding: 20px; /* Adds padding around the text */
+    border-radius: 10px; /* Soft rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px auto; /* Centers the section horizontally and adds margin */
+    max-width: 100%; /* Keeps the section from stretching too wide */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 3);;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro:hover {
+    background-color:rgba(255, 239, 204, 0.4); /* Slightly darker background color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-10px);
+}
+
+.intro p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.timeline h2{
+    font-family: 'Caslon Antique', serif;
+    font-size: 4rem; /* Slightly larger text for readability */
+    color: rgb(85, 70, 56); /* Dark brown color to match the earthy tone */
+    line-height: 1.8; /* Increases line spacing for better readability */
+    letter-spacing: 0.5px; /* Adds slight spacing between letters for style */
+    text-align: left; /* Justifies text for a clean, professional look */
+    padding: 20px; /* Adds padding around the text */
+    border-radius: 10px; /* Soft rounded corners */
+    margin: 10px auto; /* Centers the section horizontally and adds margin */
+    max-width: 100%; /* Keeps the section from stretching too wide */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+}
+ 
+.timeline li {
+    font-family: 'Caslon Antique', serif;
+    font-size: 1.5rem; /* Slightly larger text for readability */
+    color: rgb(85, 70, 56); /* Dark brown color to match the earthy tone */
+    line-height: 1.8; /* Increases line spacing for better readability */
+    text-align: left; /* Justifies text for a clean, professional look */
+    padding: 20px; /* Adds padding around the text */
+    border-radius: 10px; /* Soft rounded corners */
+    margin: 10px auto; /* Centers the section horizontally and adds margin */
+    max-width: 100%; /* Keeps the section from stretching too wide */
+    margin-bottom: 10px; /* Reduce the gap between each list item */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.timeline ul {
+
+    list-style-type: none; /* Remove the bullet points from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Container for buttons */
+.article-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 30px;
+}
+
+/* Basic button style */
+.article-btn {
+    font-family: 'Caslon Antique', serif;
+    padding: 12px 25px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    background-color:#573118; /* Blue color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* x-offset, y-offset, blur-radius, color */
+
+}
+
+/* Hover effect */
+.article-btn:hover {
+    background-color: #49391a; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: #333;
+}
+
+/* Focus effect (when the button is clicked or focused) */
+.article-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(241, 239, 239, 0.6); /* Blue glow on focus */
+}
+
+/* Active effect (when the button is clicked) */
+.article-btn:active {
+    transform: translateY(0); /* Reset the lift effect */
+    background-color: #ffffff; /* Even darker blue when pressed */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .article-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.spacer {
+    height: 50px; /* Adjust the height for the desired space */
+}
+
+.article-font {
+    font-family: 'Caslon Antique', serif;
+    font-size: 3rem; /* Slightly larger text for readability */
+    color: rgb(85, 70, 56); /* Dark brown color to match the earthy tone */
+    line-height: 1.8; /* Increases line spacing for better readability */
+    letter-spacing: 0.5px; /* Adds slight spacing between letters for style */
+    text-align: center; /* Justifies text for a clean, professional look */
+    border-radius: 10px; /* Soft rounded corners */
+    margin: 10px auto; /* Centers the section horizontally and adds margin */
+    max-width: 100%; /* Keeps the section from stretching too wide */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+/* Main Navbar Styling (unchanged) */
+/* Add this if you haven't already to handle positioning */
+#desktop-nav {
+    position: sticky; /* Keep this navbar static or relative */
+    z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+/* Secondary Navbar Styling */
+#secondary-nav {
+    background-color: rgb(41231c); /* Same background as main navbar */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px; /* Optional rounded corners */
+    position: relative; /* Stays right below the main navbar */
+    margin-top: 0; /* Removes unnecessary margin */
+    z-index: 9; /* Ensures correct layer stacking */
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between sections */
+    padding: 0;
+    margin: 0;
+    opacity: .8;;
+}
+#paintings-secondary-nav {
+    position: sticky;
+    background-color: rgb(41231c); /* Same background as main navbar */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px; /* Optional rounded corners */
+    position: sticky; /* Stays right below the main navbar */
+    margin-top: 0; /* Removes unnecessary margin */
+    z-index: 1100; /* Ensures correct layer stacking */
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between sections */
+    padding: 0;
+    margin: 0;
+    opacity: .8;;
+    top: 77px;
+}
+
+#paintings-secondary-nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Center-align the links */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+#paintings-secondary-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light hover effect */
+}
+
+#secondary-nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Center-align the links */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+#secondary-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px; /* Adjust font size */
+    font-weight: 550;
+    padding: 10px 0; /* Padding inside each link */
+    padding-left: 17rem;
+    padding-right: 17rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Ensure each item takes equal space */
+    
+}
+
+#secondary-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light hover effect */
+}
+
+/* Container to hold all the paintings */
+.painting-gallery {
+    display: flex;
+    flex-direction: column; /* Stacks images vertically */
+    align-items: center; /* Centers the images */
+    gap: 20px; /* Adds space between each image */
+    padding: 20px; /* Adds some padding around the entire gallery */
+}
+.painting-gallery img {
+    display: flex;
+    align-items: center; /* Centers the images */
+    padding-right: 2rem;
+}
+
+/* Each individual painting item */
+.painting-item {
+    text-align: center; /* Centers the image and description */
+    width: 100%; /* Ensures images take full width */
+    max-width: 300px; /* Limits the max width of the images */
+}
+
+/* Styling the image */
+.painting-item img {
+    width: 100%; /* Makes the images responsive */
+    height: auto; /* Keeps the aspect ratio of the images */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transition */
+}
+
+/* Hover effect for the image */
+.painting-item img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow when hovering */
+}
+
+/* Styling the description text */
+.description {
+    font-size: 16px;
+    color: #333; /* Dark gray text for readability */
+    margin-top: 10px; /* Adds space between the image and the description */
+    font-family: 'Georgia', serif; /* Optional: change the font */
+}
+.second-dropdown a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px; /* Adjust font size */
+    font-weight: 550;
+    padding: 10px 0; /* Padding inside each link */
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 5px;
+    padding-bottom: 1.2rem ;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Ensure each item takes equal space */
+    
+}
+
+/* Ensure the dropdown content is centered and positioned directly below "Paintings" */
+.second-dropdown-content{
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position it directly below the "Paintings" text */
+    left: 0; /* Align the dropdown content to the left of the page */
+    transform: translateX(17%); /* No horizontal shift, it starts from the left edge */
+    background-color: rgba(139, 69, 19, 0.7); /* Semi-transparent brown background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87); /* Shadow */
+    padding: 0; /* Remove padding on the container */
+    min-width: 250px; /* Set a minimum width to prevent it from becoming too narrow */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+}
+
+/* Show dropdown when hovering over the parent element */
+.second-dropdown:hover .second-dropdown-content {
+    display: block; /* Make dropdown visible when hovering */
+}
+
+/* Style for the links inside the dropdown */
+.second-dropdown-content a,
+.literature-second-dropdown-content a{
+    display: block; /* Make the links block-level so they stack vertically */
+    padding: 8px 20px; /* Adjust padding to make items clickable */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size for the dropdown options */
+    transition: background-color .3s ease; /* Smooth hover transition */
+    font-size: 20px;
+}
+
+/* Hover effect for dropdown links */
+.second-dropdown-content a:hover,
+.literature-second-dropdown-content a:hover {
+    background-color: rgba(139, 69, 19, 0.9); /* Darker background color on hover */
+    color: white; /* Text color change on hover */
+}
+
+.painting1 {
+    width: 80%; /* Makes the image responsive, scales with container size */
+    margin-left: -30px;
+    margin-top: 5rem;
+    transform: translateX(19%); /* Move the image left */
+    
+}
+.painting2 {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    margin-top: 5rem;
+}
+
+.painting3 {
+    width: 30%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 5rem;
+    transform: translateX(115%); /* Move the image left */
+}
+
+.painting4 {
+    width: 60%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    margin-top: 5rem;
+    transform: translateX(30%); /* Move the image left */
+}
+
+.painting5 {
+    width: 50%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    margin-top: 5rem;
+    transform: translateX(48%); /* Move the image left */
+}
+
+.painting6 {
+    width: 80%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    margin-top: 5rem;
+    transform: translateX(7%); /* Move the image left */
+}
+
+.painting7 {
+    width: 65%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    margin-top: 5rem;
+    transform: translateX(25%); /* Move the image left */
+}
+
+.painting8 {
+    width: 60%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    margin-top: 3rem;
+    transform: translateX(25%); /* Move the image left */
+}
+
+.painting-description {
+    font-family: 'Caslon Antique';
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .4); /* Example shadow */
+}
+
+.literature-title {
+    font-family: 'Caslon Antique';
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .4); /* Example shadow */
+}
+
+.literature1 {
+    width: 16%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(230%); /* Move the image left */
+    padding-top: 3rem;
+}
+
+.literature2 {
+    width: 45%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(60%); /* Move the image left */
+    padding-top: 5rem;
+}
+
+.literature3 {
+    width: 23%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(153%); /* Move the image left */
+    padding-top: 5rem;
+}
+
+.literature4 {
+    width: 30%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(100%); /* Move the image left */
+    padding-top: 5rem;
+}
+.literature5 {
+    width: 60%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(30%); /* Move the image left */
+    padding-top: 5rem;
+}
+
+.literature6 {
+    width: 60%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(30%); /* Move the image left */
+    padding-top: 5rem;
+}
+.literature7 {
+    width: 20%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(165%); /* Move the image left */
+    padding-top: 5rem;
+}
+
+.literature8 {
+    width: 20%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(165%); /* Move the image left */
+    padding-top: 4rem;
+}
+
+.literature9 {
+    width: 40%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(165%); /* Move the image left */
+    padding-top: 5rem;
+}
+.sculpture1 {
+    width: 45%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(57%); /* Move the image left */
+    padding-top: 5rem;
+}
+.sculpture2 {
+    width: 50%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(50%); /* Move the image left */
+    padding-top: 5rem;
+}
+.sculpture3 {
+    width: 23%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(145%); /* Move the image left */
+    padding-top: 5rem;
+}
+.sculpture4 {
+    width: 21%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(162%); /* Move the image left */
+    padding-top: 5rem;
+}
+.sculpture5 {
+    width: 45%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 10px;
+    transform: translateX(55%); /* Move the image left */
+    padding-top: 5rem;
+}
+
+.literature-second-dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position it directly below the "Paintings" text */
+    left: 0; /* Align the dropdown content to the left of the page */
+    transform: translateX(300%); /* No horizontal shift, it starts from the left edge */
+    background-color: rgba(139, 69, 19, 0.7); /* Semi-transparent brown background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87); /* Shadow */
+    padding: 0; /* Remove padding on the container */
+    min-width: 250px; /* Set a minimum width to prevent it from becoming too narrow */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+}
+
+/* Show dropdown when hovering over the parent element */
+.literature-second-dropdown:hover .literature-second-dropdown-content {
+    display: block; /* Make dropdown visible when hovering */
+}
+
+/* Style for the links inside the dropdown */
+.literature-second-dropdown-content a {
+    display: block; /* Make the links block-level so they stack vertically */
+    padding: 8px 20px; /* Adjust padding to make items clickable */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size for the dropdown options */
+    transition: background-color .3s ease; /* Smooth hover transition */
+    font-size: 20px;
+}
+
+/* Hover effect for dropdown links */
+.literature-second-dropdown-content a:hover {
+    background-color: rgba(139, 69, 19, 0.9); /* Darker background color on hover */
+    color: white; /* Text color change on hover */
+}
+
+
+.second-dropdown:hover .literature-second-dropdown-content {
+    display: block; /* Make dropdown visible when hovering */
+}
+
+.sculpture-second-dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position it directly below the "Paintings" text */
+    left: 0; /* Align the dropdown content to the left of the page */
+    transform: translateX(504%); /* No horizontal shift, it starts from the left edge */
+    background-color: rgba(139, 69, 19, 0.7); /* Semi-transparent brown background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.87); /* Shadow */
+    padding: 0; /* Remove padding on the container */
+    min-width: 250px; /* Set a minimum width to prevent it from becoming too narrow */
+    text-align: left; /* Align text to the left */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+}
+
+/* Show dropdown when hovering over the parent element */
+.sculpture-second-dropdown:hover .literature-second-dropdown-content {
+    display: block; /* Make dropdown visible when hovering */
+}
+
+/* Style for the links inside the dropdown */
+.sculpture-second-dropdown-content a {
+    display: block; /* Make the links block-level so they stack vertically */
+    padding: 8px 20px; /* Adjust padding to make items clickable */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size for the dropdown options */
+    transition: background-color .3s ease; /* Smooth hover transition */
+    font-size: 20px;
+}
+
+/* Hover effect for dropdown links */
+.sculpture-second-dropdown-content a:hover {
+    background-color: rgba(139, 69, 19, 0.9); /* Darker background color on hover */
+    color: white; /* Text color change on hover */
+}
+
+
+.second-dropdown:hover .sculpture-second-dropdown-content {
+    display: block; /* Make dropdown visible when hovering */
+}
+
+#upper-left {
+    position: relative; /* Ensures positioning context for child elements */
+    width: 100%; /* Full width of the section */
+    height: 100vh; /* Full height of the viewport */
+}
+
+#upper-left img {
+    position: absolute; /* Allows positioning relative to the parent section */
+    top: 0; /* Aligns the image to the top */
+    left: 0; /* Aligns the image to the left */
+    width: auto; /* Keeps the image’s width based on its natural aspect ratio */
+    height: auto; /* Keeps the image’s height based on its natural aspect ratio */
+    max-width: 100%; /* Prevents the image from overflowing the section */
+    max-height: 100%; /* Ensures the image doesn’t stretch beyond the section */
+}
+
+
+
+
+
+
+
+
+
+
+
